@@ -17,11 +17,13 @@ public class V1_Initial implements IMigration {
         return "Initial migration";
     }
 
+    private static final String QUERY_SCHEMA = "CREATE SCHEMA IF NOT EXISTS ocular;";
+
     @Override
     public void migrate(Connection connection, DatabaseType databaseType) throws Exception {
         try(Statement statement = connection.createStatement())
         {
-            // statement.execute("CREATE TABLE IF NOT EXISTS `ocular`.`players` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `uuid` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+            statement.execute(QUERY_SCHEMA);
         }
     }
 }

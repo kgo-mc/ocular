@@ -21,7 +21,7 @@ public class OcularPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         Zelda.builder()
-                .centralConfig(Path.of(getDataFolder().getPath(), "../", "Zelda"))
+                .centralConfig(Path.of(getDataFolder().getPath(), "../", "Zelda").normalize())
                 .withDatabase()
                 .withUI()
                 .withBus()
