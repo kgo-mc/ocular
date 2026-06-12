@@ -1,0 +1,23 @@
+name: Ocular
+version: '1.0'
+main: net.kgomc.ocular.paper.OcularPlugin
+description: A tag plugin for KGO MC
+api-version: '26.1.2'
+#bootstrapper: io.papermc.testplugin.TestPluginBootstrap
+#loader: io.papermc.testplugin.TestPluginLoader
+dependencies:
+  bootstrap:
+    # Let's say that RegistryPlugin registers some data that your plugin needs to use
+    # We don't need this during runtime, so it's not required in the server section.
+    # However, can be added to both if needed
+#    RegistryPlugin:
+#      load: BEFORE
+#      required: true
+#      join-classpath: true # Defaults to true
+  server:
+    # Add a required "RequiredPlugin" dependency, which will load AFTER your plugin.
+#    RequiredPlugin:
+#      load: AFTER
+#      required: true
+#      # This means that your plugin will not have access to their classpath
+#      join-classpath: false
